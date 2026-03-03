@@ -88,7 +88,9 @@ Install Docker:
   
 * create New Task Defination - give the name for task defination family (cancer-new-task) - Launch type - AWS Fargate - other configration requirements default - 
 - container 1 - Name(cancer-app) - Image URl - add container port - 5000-TCP-HTTP - Other settings default - Log collection - untick - other settings default - create task
- 
+
+## now go to cluster and create service
+
 * go to the cluster - Services - Service details - Task definition family name - Service name - Environment(existing cluster) - compute configuration - capacity provider stratigy -
 - capacity provider -fargate - Deployment configuration - Scheduling strategy (select Replica) - desired task -1 - other setting related to deployment default - Networking - select security group with selected port 5000
 - other setting default - create service
@@ -100,6 +102,32 @@ Install Docker:
 ## you will successfully get the prediction
 
 Hurray! finally my CancerApp is in operation. Now when we copy the URL in the browser, it predicted the result as ‘0’ which means a patient is diagnosed as Benign for breast cancer.
-  
+
+===================================================================================================================================================================
+
+## Above project related links: 
+
+1)Breast cancer prediction with logistic regression Project link: Part-1
+
+    https://srinipratapgiri.medium.com/logistic-regression-breast-cancer-prediction-935ecd990b2a
+
+2)Deployment of Containerized Machine Learning Model Application on AWS Elastic Container Service(ECS) link: Part-2
+
+    https://srinipratapgiri.medium.com/deployment-of-containerized-machine-learning-model-application-on-aws-elastic-container-cbd1464643b3
+
+Dataset link: 
+
+    1) https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
+
+    2) https://www.kaggle.com/uciml/breast-cancer-wisconsin-data?select=data.csv
+
+
+Understand logistic regression link:
+
+    https://medium.com/@satyarepala/understanding-logistic-regression-a-step-by-step-explanation-9a404344964b
+
+If you want to deploy this application more specific you can create one template folder in thi repo and add home.html and index.html files in it and update your app.py file according it so you will get proper prediction page to predict cancer deacease.
+
+
 
 
