@@ -103,7 +103,7 @@ Install Docker:
 
 Hurray! finally my CancerApp is in operation. Now when we copy the URL in the browser, it predicted the result as ‘0’ which means a patient is diagnosed as Benign for breast cancer.
 
-===================================================================================================================================================================
+==============================================================================================
 
 ## Above project related links: 
 
@@ -126,7 +126,7 @@ Understand logistic regression link:
 
     https://medium.com/@satyarepala/understanding-logistic-regression-a-step-by-step-explanation-9a404344964b
 
-If you want to deploy this application more specific you can create one template folder in thi repo and add home.html and index.html files in it and update your app.py file according it so you will get proper prediction page to predict cancer deacease.
+## If you want to deploy this application more specific you can create one template folder in thi repo and add home.html and index.html files in it and update your app.py file according it so you will get proper prediction page to predict cancer deacease.
 
 
 
