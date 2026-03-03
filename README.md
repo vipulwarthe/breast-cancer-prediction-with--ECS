@@ -89,7 +89,7 @@ Install Docker:
 * create New Task Defination - give the name for task defination family (cancer-new-task) - Launch type - AWS Fargate - other configration requirements default - 
 - container 1 - Name(cancer-app) - Image URl - add container port - 5000-TCP-HTTP - Other settings default - Log collection - untick - other settings default - create task
  
-## go to the cluster - Services - Service details - Task definition family name - Service name - Environment(existing cluster) - compute configuration - capacity provider stratigy -
+* go to the cluster - Services - Service details - Task definition family name - Service name - Environment(existing cluster) - compute configuration - capacity provider stratigy -
 - capacity provider -fargate - Deployment configuration - Scheduling strategy (select Replica) - desired task -1 - other setting related to deployment default - Networking - select security group with selected port 5000
 - other setting default - create service
 
