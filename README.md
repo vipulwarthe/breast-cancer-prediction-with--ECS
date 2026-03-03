@@ -106,7 +106,8 @@ Hurray! finally my CancerApp is in operation. Now when we copy the URL in the br
 Delete all resources:
 
 * first deregister the task defination
-* delete the cluster
+* delete the ECS cluster
+* delete ECR repo
 * delete the instance
 
 ==============================================================================================
