@@ -103,6 +103,12 @@ Install Docker:
 
 Hurray! finally my CancerApp is in operation. Now when we copy the URL in the browser, it predicted the result as ‘0’ which means a patient is diagnosed as Benign for breast cancer.
 
+Delete all resources:
+
+* first deregister the task defination
+* delete the cluster
+* delete the instance
+
 ==============================================================================================
 
 ## Above project related links: 
