@@ -8,72 +8,60 @@ Login to you server
 
     sudo apt-get update
 
-
 ## create and activate python env
 
-""
-sudo apt install python3-venv -y
-python3 -m venv mlpro
-source mlpro/bin/activate   
-deactivate 
-
-""
+    sudo apt install python3-venv -y
+    python3 -m venv mlpro
+    source mlpro/bin/activate   
+    deactivate 
 
 ## Install AWSCLI
-
-"" 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-sudo apt install unzip -y
-unzip awscliv2.zip
-sudo ./aws/install 
-""
+ 
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    sudo apt install unzip -y
+    unzip awscliv2.zip
+    sudo ./aws/install 
 
 ## Configure the aws
 
     aws configure             
 
-
 Install Docker:
 
-""
-sudo vi docker-install.sh
+    sudo vi docker-install.sh
 
-# Add Docker's official GPG key:
-sudo apt update
-sudo apt install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+    # Add Docker's official GPG key:
+    sudo apt update
+    sudo apt install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
-EOF
+    # Add the repository to Apt sources:
+    sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+    Types: deb
+    URIs: https://download.docker.com/linux/ubuntu
+    Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+    Components: stable
+    Signed-By: /etc/apt/keyrings/docker.asc
+    EOF
 
-sudo apt update -y
+    sudo apt update -y
+    sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+    docker --version
+    sudo usermod -aG docker $USER         #OR you can use "newgrp docker" as a next commmand
+    sudo chown $USER /var/run/docker.sock 
+    sudo systemctl enable docker
+    sudo systemctl start docker
+    sudo systemctl status docker
 
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-docker --version
-sudo usermod -aG docker $USER         #OR you can use "newgrp docker" as a next commmand
-sudo chown $USER /var/run/docker.sock 
-sudo systemctl enable docker
-sudo systemctl start docker
-sudo systemctl status docker
-
-sudo chmod +x docker-install.sh
-./docker-install.sh
-""
+    sudo chmod +x docker-install.sh
+    ./docker-install.sh
 
 ## Clone the repo
 
-""
-git clone https://github.com/vipulwarthe/breast-cancer-LR-ML-model-deploy-on-ecs.git
-cd <repo name>
-""
+    git clone https://github.com/vipulwarthe/breast-cancer-LR-ML-model-deploy-on-ecs.git
+    cd <repo name>
 
     pip install -r requirements.txt
 
