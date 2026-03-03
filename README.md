@@ -129,5 +129,7 @@ Understand logistic regression link:
 ## If you want to deploy this application more specific you can create one template folder in thi repo and add home.html and index.html files in it and update your app.py file according it so you will get proper prediction page to predict cancer deacease.
 
 
+## other project link for prediction of breast cancer:
 
+    https://indianaiproduction.com/breast-cancer-detection-using-machine-learning-classifier/
 
